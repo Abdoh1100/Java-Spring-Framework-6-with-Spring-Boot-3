@@ -15,6 +15,7 @@ public class App
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         programmer pro=(programmer) context.getBean("programmer");
         System.out.println(pro.getAge());
-
+        pro.getComp().compile();
+        
     }
 }

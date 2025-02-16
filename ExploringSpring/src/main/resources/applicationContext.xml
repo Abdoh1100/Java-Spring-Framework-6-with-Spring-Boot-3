@@ -6,5 +6,9 @@
 
     <!-- bean definitions here -->
 
-    <bean id="programmer"  class="org.example.programmer" scope="prototype"></bean>
+    <bean id="programmer"  class="org.example.programmer">
+
+        <property name="age" value="21"></property>
+    </bean>
+
 </beans>

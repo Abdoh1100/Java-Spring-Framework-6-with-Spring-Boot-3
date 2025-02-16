@@ -6,9 +6,18 @@
 
     <!-- bean definitions here -->
 
-    <bean id="programmer"  class="org.example.programmer">
+    <bean id="programmer"  class="org.example.programmer" autowire="byName">
+        <property name="age" value="33"/>
 
-        <property name="age" value="21"></property>
+
+<!--        <constructor-arg index="1" ref="laptop"></constructor-arg>-->
+<!--        <constructor-arg index="0" value="30"></constructor-arg>-->
+<!--        <constructor-arg type="int" value="30"></constructor-arg>-->
+<!--        <constructor-arg type="org.example.Laptop" ref="laptop"></constructor-arg>-->
+<!--        <property name="age" value="21"></property>-->
+<!--        <property name="lap" ref="laptop"></property>-->
     </bean>
+
+    <bean id="comp" class="org.example.Desktop" primary="true"/>
 
 </beans>

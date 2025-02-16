@@ -13,6 +13,10 @@ public class App
     {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-        System.out.println( "Hello World!" );
+        programmer pro=(programmer) context.getBean("programmer");
+               pro.age=pro.age+1;//1
+        System.out.println(pro.age);
+        programmer pro2=(programmer) context.getBean("programmer");
+        System.out.println(pro2.age);//0 thus we have got two objects created for us
     }
 }

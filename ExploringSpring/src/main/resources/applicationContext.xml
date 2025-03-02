@@ -8,6 +8,9 @@
 
     <bean id="programmer"  class="org.example.programmer" autowire="byName">
         <property name="age" value="33"/>
+        <property name="comp">
+            <bean class="org.example.Desktop"/>
+        </property>
 
 
 <!--        <constructor-arg index="1" ref="laptop"></constructor-arg>-->
@@ -18,6 +21,7 @@
 <!--        <property name="lap" ref="laptop"></property>-->
     </bean>
 
-    <bean id="comp" class="org.example.Desktop" primary="true"/>
-
+<!--    <bean id="comp" class="org.example.Laptop" primary="true"/>-->
+<!--    <bean id="comp" class="org.example.Laptop" lazy-init="true"/> &lt;!&ndash;so if a none lazy object is depending on a lazy object it will be created no matter what otherwise the lazy object won't bea created unless gets called&ndash;&gt;-->
+<!--<bean class="org.example.Desktop"/> &lt;!&ndash; no need fo the id if got the bean using class object &ndash;&gt;-->
 </beans>

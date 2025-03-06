@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -24,7 +24,7 @@ public class Alien {
         return comp;
     }
 
-    void code(){
+    public void code(){
         comp.compile();
     }
     @Autowired

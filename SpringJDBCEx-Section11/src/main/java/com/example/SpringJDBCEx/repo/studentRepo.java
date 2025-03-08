@@ -18,7 +18,7 @@ public class studentRepo {
     private JdbcTemplate jdbc;
 
     public void save(student st) {
-
+//section 11 rowmapper video in spring course for revising.
         String sql="insert into student (rollnum,name,marks) values(?,?,?)";
         int i=jdbc.update(sql, st.getRonum(), st.getName(),st.getMarks());
         System.out.println(i+" effected");
@@ -29,9 +29,10 @@ public class studentRepo {
        String sql="select * from student";
         RowMapper<student> mapper=new RowMapper<>() {
 
-            student s=new student();
+
             @Override
             public student mapRow(ResultSet rs, int rowNum) throws SQLException {
+                student s=new student();
                 s.setRonum(rs.getInt("rollnum"));
                 s.setName(rs.getString("name"));
                 s.setMarks(rs.getInt("marks"));

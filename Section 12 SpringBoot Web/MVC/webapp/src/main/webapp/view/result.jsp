@@ -7,6 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Result page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <%--<h1>Result is : <%=session.getAttribute("result")%></h1>--%>
